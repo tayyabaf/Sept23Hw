@@ -12,7 +12,4 @@ public class USDollar implements ConvertableCurrency {
         return value;
     }
 
-    public CurrencyType getCtype() {
-        return ctype;
-    }
 }

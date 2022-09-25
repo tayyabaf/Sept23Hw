@@ -27,13 +27,13 @@ public class Main {
 
         //trying "lookup" method
         System.out.println("LOOKUP METHOD:");
-        System.out.println(myPhonebook.lookup("Mil"));
+        System.out.println(myPhonebook.lookup("Lisa"));
 
         //trying "reverseLookup" method
         System.out.println("REVERSELOOKUP METHOD:");
         System.out.println(myPhonebook.reverseLookup("7676"));
 
-        //trying "getAllContactNames" method FAILED!!!! FIX THE METHOD
+        //trying "getAllContactNames" method
         System.out.println("GETALLCONTACTNAMES METHOD:");
         System.out.println(myPhonebook.getAllContactNames());
 

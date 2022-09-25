@@ -60,10 +60,11 @@ public class PhoneBook {
     }
 
     public String getAllContactNames() {
+        String result = "";
         for (String contacts : phonebook.keySet()) {
-            System.out.print(contacts + ", ");      //FIX THIS
+            result += contacts + ", ";
         }
-        return " ";
+        return result;
         }
 
 

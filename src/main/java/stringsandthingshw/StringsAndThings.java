@@ -16,10 +16,10 @@ public class StringsAndThings {
     public static Integer countYZ(String input) {
         Integer counter = 0;
         input = input.toLowerCase();
+        if (input.charAt(input.length() - 1) == 'z' || input.charAt(input.length() - 1) == 'y') {
+            counter++;
+        }
         for (int i = 0; i < input.length() - 1; i++) {
-            if (input.charAt(input.length() - 1) == 'z' || input.charAt(input.length() - 1) == 'y') {
-                counter++;
-            }
             if ((input.charAt(i) == 'z' || input.charAt(i) == 'y') && !Character.isLetter(input.charAt(i + 1))) {
                 counter++;
             }
@@ -80,15 +80,16 @@ public class StringsAndThings {
          *           gHappy("xxggyygxx") // Should return  false
          */
 
-        //FAILED!!!!!!
+        //failed
         public static Boolean gIsHappy (String input){
             Boolean happyStatus = false;
             for (int i = 0; i < input.length()-1; i++){
-                if(input.charAt(i) == 'g' && input.charAt(i-1) == 'g' || input.charAt(i+1) == 'g'){
+                if(input.charAt(i) == 'g' && input.charAt(i+1) == 'g' || input.charAt(i+1) == 'g'){
                     happyStatus=true;
                 }
             }
             return happyStatus;
+
         }
 
 
@@ -113,13 +114,13 @@ public class StringsAndThings {
         }
 
     public static void main(String[] args) {
-        System.out.println(countYZ("hey you guyy"));
+        System.out.println(countYZ("fez day"));
 
-        System.out.println(removeString("Julinna loves you", "loves"));
+        System.out.println(removeString("Today is a great day to eat icecream", "to eat icecream"));
 
         System.out.println(containsEqualNumberOfIsAndNot("This is notnot"));
 
-        System.out.println(gIsHappy("xxggyygxx"));
-        System.out.println(countTriple("xxxyyabyyyycd"));
+        System.out.println(gIsHappy("xxgyygxx")); // failed
+        System.out.println(countTriple("xxyyabyyycd"));
     }
     }
