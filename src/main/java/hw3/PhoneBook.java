@@ -44,11 +44,7 @@ public class PhoneBook {
     }
 
     public List<String> lookup(String name) {
-        for (Map.Entry<String, List<String>> entry : phonebook.entrySet())
-            if (phonebook.containsKey(name)) {
-                return phonebook.get(name);
-            }
-        return null;
+        return phonebook.get(name);
     }
 
     public String reverseLookup(String phoneNumber) {
