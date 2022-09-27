@@ -80,11 +80,11 @@ public class StringsAndThings {
          *           gHappy("xxggyygxx") // Should return  false
          */
 
-        //failed
+        //failed -- fixed
         public static Boolean gIsHappy (String input){
             Boolean happyStatus = false;
             for (int i = 0; i < input.length()-1; i++){
-                if(input.charAt(i) == 'g' && input.charAt(i+1) == 'g' || input.charAt(i+1) == 'g'){
+                if(input.charAt(i) == 'g' && input.charAt(i+1) == 'g' ){
                     happyStatus=true;
                 }
             }
@@ -120,7 +120,7 @@ public class StringsAndThings {
 
         System.out.println(containsEqualNumberOfIsAndNot("This is notnot"));
 
-        System.out.println(gIsHappy("xxgyygxx")); // failed
+        System.out.println(gIsHappy("xxggyygxx")); // failed -- fixed
         System.out.println(countTriple("xxyyabyyycd"));
     }
     }
